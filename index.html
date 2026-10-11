@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="te"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>రైతు సహాయకుడు</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><main><header><p class="eyebrow">DEMO • రైతు సహాయకుడు</p><h1>వర్షాధార రైతు నిర్ణయ సహాయకుడు</h1><p>స్థానిక సమాచారం ఆధారంగా సులభమైన, సురక్షిత సూచనలు.</p></header>
+<section class="notice">ఇది ప్రదర్శన నమూనా మాత్రమే. ఇది వర్షం, దిగుబడి లేదా వ్యాధి నిర్ధారణకు హామీ ఇవ్వదు.</section>
+<section class="card"><h2>పంట పరిస్థితి తెలుసుకోండి</h2><form id="advisory-form">
+<label>గ్రామం<input name="village" required minlength="2" placeholder="ఉదా: అనంతపురం"></label><label>పంట<select name="crop"><option value="groundnut">వేరుశనగ</option><option value="red_gram">కంది</option><option value="millet">చిరుధాన్యం</option></select></label>
+<label>పంట దశ<select name="stage"><option value="not_sown">ఇంకా విత్తలేదు</option><option value="newly_sown">కొత్తగా విత్తాను</option><option value="vegetative">పెరుగుదల దశ</option><option value="flowering">పుష్పించే దశ</option><option value="pod_grain">కాయ/గింజ దశ</option><option value="harvest">కోత దశ</option></select></label>
+<div class="grid"><label>గత 7 రోజుల్లో వర్షం (mm)<input name="rain_last_7_days_mm" type="number" min="0" value="5" required></label><label>వచ్చే 5 రోజుల్లో అంచనా వర్షం (mm)<input name="forecast_rain_next_5_days_mm" type="number" min="0" value="5" required></label></div>
+<label>వర్షం లేకుండా ఎన్ని రోజులు?<input name="days_without_rain" type="number" min="0" value="10" required></label><button type="submit">సూచన చూడండి</button></form><article id="result" hidden aria-live="polite"></article></section>
+<section class="card"><h2>ఆకుల ఫోటో పంపండి (ఐచ్ఛికం)</h2><p>ఈ డెమో ఫోటో వ్యాధిని గుర్తించదు; నిపుణుని సమీక్షకు మాత్రమే.</p><form id="photo-form"><input name="photo" type="file" accept="image/jpeg,image/png,image/webp" required><button>ఫోటో పంపండి</button></form><p id="photo-result"></p></section>
+<section class="card"><h2>నిపుణుడి కాల్‌బ్యాక్ కోరండి</h2><form id="callback-form"><div class="grid"><label>పేరు<input name="name" required></label><label>మొబైల్ నంబర్<input name="phone" inputmode="numeric" pattern="[6-9][0-9]{9}" required></label></div><label>గ్రామం<input name="village" required></label><label>సమస్య<textarea name="concern" required minlength="5"></textarea></label><button>అభ్యర్థన పంపండి</button></form><p id="callback-result"></p></section>
+</main><script src="/static/app.js"></script></body></html>
